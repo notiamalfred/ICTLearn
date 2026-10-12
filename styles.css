@@ -17,12 +17,20 @@ body {
   padding: 0 20px;
 }
 
+/* ---------- Header (sticky, layered on top) ---------- */
 .site-header {
-  background: #0d3b2e;
+  background: #3e2723;
   color: #fff;
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 1000;          /* high z-index so it stays above everything */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.site-header--scrolled {
+  background: #2d1b18;    /* slightly darker when scrolled */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
 }
 
 .header-inner {
@@ -42,15 +50,17 @@ body {
 }
 
 .logo span {
-  color: #f6ad55;
+  color: #ff8f00;
 }
 
 .nav {
   display: none;
   width: 100%;
   flex-direction: column;
-  background: #0d3b2e;
+  background: #3e2723;
   padding: 0 4px 12px;
+  position: relative;
+  z-index: 1001;          /* keep dropdown above page content */
 }
 
 .nav.nav-open {
@@ -68,22 +78,23 @@ body {
 }
 
 .nav a:hover {
-  background: #1a7a5a;
+  background: #bf360c;
   color: #fff;
 }
 
 .nav .cross-link {
-  color: #fbd38d;
+  color: #ffcc80;
   font-weight: 600;
 }
 
 .nav .cross-link:hover {
-  background: #2c5282;
-  color: #fefcbf;
+  background: #5d4037;
+  color: #fff3e0;
 }
 
+/* ---------- Hero ---------- */
 .hero {
-  background: linear-gradient(135deg, #0d3b2e, #1a7a5a);
+  background: linear-gradient(135deg, #3e2723, #bf360c);
   color: #fff;
   text-align: center;
   padding: 80px 20px;
@@ -98,13 +109,13 @@ body {
   font-size: 1.15rem;
   max-width: 660px;
   margin: 0 auto 32px;
-  color: #bee3f8;
+  color: #ffccbc;
 }
 
 .btn {
   display: inline-block;
-  background: #e67e22;
-  color: #0d3b2e;
+  background: #ff8f00;
+  color: #3e2723;
   padding: 12px 28px;
   border-radius: 6px;
   text-decoration: none;
@@ -112,9 +123,11 @@ body {
 }
 
 .btn:hover {
-  background: #d35400;
+  background: #e65100;
+  color: #fff;
 }
 
+/* ---------- Quote ---------- */
 .quote-of-the-day {
   padding: 48px 0;
   background: #fff;
@@ -123,7 +136,7 @@ body {
 
 .quote-of-the-day h2 {
   font-size: 1.6rem;
-  color: #0d3b2e;
+  color: #3e2723;
   margin-bottom: 20px;
 }
 
@@ -144,6 +157,7 @@ body {
   font-weight: 600;
 }
 
+/* ---------- Concepts / Features ---------- */
 .concepts {
   padding: 64px 0;
   background: #edf2f7;
@@ -153,7 +167,7 @@ body {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 8px;
-  color: #0d3b2e;
+  color: #3e2723;
 }
 
 .concepts .section-subtitle {
@@ -170,14 +184,14 @@ body {
 
 .concept-card {
   background: #fff;
-  border-left: 5px solid #e67e22;
+  border-left: 5px solid #ff8f00;
   border-radius: 8px;
   padding: 20px 22px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .concept-card h3 {
-  color: #0d3b2e;
+  color: #3e2723;
   font-size: 1.05rem;
   margin-bottom: 6px;
 }
@@ -195,7 +209,7 @@ body {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 40px;
-  color: #0d3b2e;
+  color: #3e2723;
 }
 
 .feature-grid {
@@ -212,7 +226,7 @@ body {
 }
 
 .feature-card h3 {
-  color: #1a7a5a;
+  color: #bf360c;
   margin-bottom: 8px;
 }
 
@@ -222,7 +236,7 @@ body {
 }
 
 .feature-card h3 a:hover {
-  color: #e67e22;
+  color: #ff8f00;
 }
 
 .feature-card p {
@@ -230,6 +244,7 @@ body {
   font-size: 0.95rem;
 }
 
+/* ---------- Content pages ---------- */
 .skill-page {
   padding: 64px 0;
   background: #edf2f7;
@@ -237,13 +252,13 @@ body {
 }
 
 .skill-page h2 {
-  color: #0d3b2e;
+  color: #3e2723;
   font-size: 1.9rem;
 }
 
 .part-heading {
   font-size: 1.4rem;
-  color: #0d3b2e;
+  color: #3e2723;
   margin: 40px 0 20px;
   padding-bottom: 8px;
   border-bottom: 2px solid #cbd5e0;
@@ -263,7 +278,7 @@ body {
 
 .part-btn {
   display: inline-block;
-  background: #1a7a5a;
+  background: #bf360c;
   color: #fff;
   padding: 8px 20px;
   border-radius: 6px;
@@ -273,7 +288,7 @@ body {
 }
 
 .part-btn:hover {
-  background: #0d3b2e;
+  background: #3e2723;
 }
 
 .skill-grid {
@@ -283,26 +298,26 @@ body {
 
 .skill-card {
   background: #fff;
-  border-left: 5px solid #1a7a5a;
+  border-left: 5px solid #bf360c;
   border-radius: 8px;
   padding: 28px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .skill-card h3 {
-  color: #0d3b2e;
+  color: #3e2723;
   font-size: 1.25rem;
   margin-bottom: 12px;
 }
 
 .skill-card h4 {
-  color: #1a7a5a;
+  color: #bf360c;
   margin: 14px 0 6px;
   font-size: 1rem;
 }
 
 .skill-card h5 {
-  color: #1a7a5a;
+  color: #bf360c;
   margin: 16px 0 6px;
   font-size: 0.95rem;
   font-weight: 700;
@@ -331,16 +346,17 @@ body {
 }
 
 .example-card {
-  border-left-color: #e67e22;
+  border-left-color: #ff8f00;
 }
 
 .site-footer {
-  background: #0d3b2e;
+  background: #3e2723;
   color: #cbd5e0;
   text-align: center;
   padding: 24px 0;
 }
 
+/* ---------- Menu toggle ---------- */
 .menu-toggle {
   display: flex;
   flex-direction: column;
@@ -374,6 +390,7 @@ body {
   transform: translateY(-8px) rotate(-45deg);
 }
 
+/* ---------- Header search ---------- */
 .header-inner .skill-search {
   position: relative;
   flex: 1 1 200px;
@@ -420,8 +437,8 @@ body {
 
 .header-inner #skillSearch:focus {
   background: #fff;
-  border-color: #e67e22;
-  box-shadow: 0 0 0 3px rgba(237, 137, 54, 0.35);
+  border-color: #ff8f00;
+  box-shadow: 0 0 0 3px rgba(255, 143, 0, 0.35);
 }
 
 #skillSearch::-webkit-search-cancel-button { display: none; }
@@ -515,6 +532,7 @@ body {
   display: none;
 }
 
+/* ---------- Utility ---------- */
 .visually-hidden {
   position: absolute;
   width: 1px; height: 1px;
@@ -533,8 +551,9 @@ body {
   transition: outline-color 0.3s, background 0.3s;
 }
 
-body.menu-open .site-header { z-index: 60; }
+body.menu-open .site-header { z-index: 1000; }
 
+/* ---------- Data tables ---------- */
 .table-wrap {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
@@ -549,7 +568,7 @@ body.menu-open .site-header { z-index: 60; }
 }
 
 .data-table th {
-  background: #0d3b2e;
+  background: #3e2723;
   color: #fff;
   font-weight: 700;
   text-align: center;
@@ -569,9 +588,10 @@ body.menu-open .site-header { z-index: 60; }
   text-align: center;
 }
 
+/* ---------- Math display ---------- */
 .math-block {
   background: #f7fafc;
-  border-left: 4px solid #1a7a5a;
+  border-left: 4px solid #bf360c;
   padding: 12px 18px;
   margin: 12px 0;
   font-family: "Cambria Math", "Times New Roman", serif;
@@ -635,6 +655,7 @@ figcaption {
   line-height: 1.4;
 }
 
+/* ---------- Mobile ---------- */
 @media (max-width: 768px) {
   .header-inner { padding: 12px 16px; }
 
@@ -670,6 +691,7 @@ figcaption {
   .skill-card h3 { font-size: 1.15rem; }
 }
 
+/* ---------- Mobile width guards ---------- */
 html, body {
   overflow-x: hidden;
   max-width: 100%;
@@ -714,6 +736,7 @@ img, svg, video, canvas, iframe {
   .part-btn { padding: 6px 14px; font-size: 0.85rem; }
 }
 
+/* ---------- Update Log ---------- */
 .update-log {
   padding: 64px 0;
   background: #fff;
@@ -723,7 +746,7 @@ img, svg, video, canvas, iframe {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 40px;
-  color: #1a7a5a;
+  color: #bf360c;
 }
 
 .commit-list {
@@ -737,7 +760,7 @@ img, svg, video, canvas, iframe {
   flex-direction: column;
   padding: 16px 20px;
   background: #f7fafc;
-  border-left: 4px solid #1a7a5a;
+  border-left: 4px solid #bf360c;
   border-radius: 6px;
   text-decoration: none;
   color: inherit;
