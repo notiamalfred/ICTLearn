@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICTLearn — HKDSE Information &amp; Communication Technology Study Platform</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">ICT<span>Learn</span></a>
+
+      <div class="skill-search" role="search">
+        <div class="skill-search__field">
+          <svg class="skill-search__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="16.5" y1="16.5" x2="21" y2="21"></line>
+          </svg>
+          <label class="visually-hidden" for="skillSearch">Search topics</label>
+          <input id="skillSearch" type="search" placeholder="Search topics…  (press / )"
+                 autocomplete="off" spellcheck="false" aria-describedby="skillSearchStatus">
+          <button id="skillSearchClear" class="skill-search__clear" type="button" hidden
+                  aria-label="Clear search">&times;</button>
+          <div id="searchResults" class="search-results" hidden></div>
+        </div>
+        <p id="skillSearchStatus" class="skill-search__status" role="status" aria-live="polite"></p>
+      </div>
+
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="information-systems.html">Information Systems</a>
+        <a href="data-control.html">Data Control</a>
+        <a href="number-systems.html">Number Systems</a>
+        <a href="barcodes-qr.html">Barcodes &amp; QR</a>
+        <a href="digitalisation.html">Digitalisation</a>
+        <a href="multimedia.html">Multimedia</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="https://notiamalfred.github.io/MathLearn/" class="cross-link">MathLearn ↗</a>
+        <a href="https://notiamalfred.github.io/EconLearn/" class="cross-link">EconLearn ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="container">
+      <h1>Master ICT, One Concept at a Time</h1>
+      <p>
+        Study information systems, data control, number systems, character encoding,
+        barcodes, QR codes, digitalisation and multimedia compression with clear
+        explanations for HKDSE Information &amp; Communication Technology.
+      </p>
+      <a href="information-systems.html" class="btn">Start Learning</a>
+    </div>
+  </section>
+
+  <section id="update-log" class="update-log">
+    <div class="container">
+      <h2>Update Log</h2>
+      <div id="commit-list" class="commit-list"></div>
+    </div>
+  </section>
+
+  <section class="quote-of-the-day">
+    <div class="container">
+      <h2>Quote of the Day</h2>
+      <blockquote id="daily-quote" class="daily-quote"></blockquote>
+    </div>
+  </section>
+
+  <section id="concepts" class="concepts">
+    <div class="container">
+      <h2>Key Topics</h2>
+      <p class="section-subtitle">The building blocks every HKDSE ICT student must master.</p>
+      <div class="concept-grid">
+        <div class="concept-card">
+          <h3>Information Systems</h3>
+          <p>Roles of computer engineer, systems analyst and programmer; data vs information; input–process–output cycle.</p>
+        </div>
+        <div class="concept-card">
+          <h3>Data Control</h3>
+          <p>Garbage in, garbage out; data source, transcription and transposition errors; validation and verification.</p>
+        </div>
+        <div class="concept-card">
+          <h3>Number Systems</h3>
+          <p>Binary, decimal, hexadecimal; signed and unsigned integers; sign &amp; magnitude; two's complement.</p>
+        </div>
+        <div class="concept-card">
+          <h3>Character Encoding</h3>
+          <p>ASCII, Big-5, Guobiao (GB) and Unicode — sizes and interchange issues.</p>
+        </div>
+        <div class="concept-card">
+          <h3>Barcodes &amp; QR Codes</h3>
+          <p>Elements, quiet zones, position patterns, alignment pattern and fault tolerance.</p>
+        </div>
+        <div class="concept-card">
+          <h3>Digitalisation</h3>
+          <p>Analog vs digital data; discretisation, quantisation and sampling rate.</p>
+        </div>
+        <div class="concept-card">
+          <h3>Multimedia</h3>
+          <p>File formats, lossless vs lossy compression and compression ratios.</p>
+        </div>
+        <div class="concept-card">
+          <h3>Glossary</h3>
+          <p>All key ICT definitions in one place.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="features">
+    <div class="container">
+      <h2>All Topics</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3><a href="information-systems.html">Information Systems</a></h3>
+          <p>Roles, data vs information, IPO cycle and 7 processing steps.</p>
+        </div>
+        <div class="feature-card">
+          <h3><a href="data-control.html">Data Control</a></h3>
+          <p>Validation, verification, check digits, parity bits and UI designs.</p>
+        </div>
+        <div class="feature-card">
+          <h3><a href="number-systems.html">Number Systems</a></h3>
+          <p>Binary, hex, signed integers, two's complement and encoding.</p>
+        </div>
+        <div class="feature-card">
+          <h3><a href="barcodes-qr.html">Barcodes &amp; QR Codes</a></h3>
+          <p>Symbols, quiet zones, position patterns and error correction.</p>
+        </div>
+        <div class="feature-card">
+          <h3><a href="digitalisation.html">Digitalisation</a></h3>
+          <p>Sampling, quantisation, OCR and file size calculations.</p>
+        </div>
+        <div class="feature-card">
+          <h3><a href="multimedia.html">Multimedia</a></h3>
+          <p>BMP, PNG, JPG, TXT, RTF, PDF and compression.</p>
+        </div>
+        <div class="feature-card">
+          <h3><a href="glossary.html">Glossary</a></h3>
+          <p>All key definitions in one place.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Keep learning, keep growing.</p>
+    </div>
+  </footer>
+
+  <script src="menu.js"></script>
+  <script src="quotes.js"></script>
+  <script src="daily-quote.js"></script>
+  <script src="site-search.js"></script>
+  <script src="update-log.js"></script>
+</body>
+</html>
