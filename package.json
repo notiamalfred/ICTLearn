@@ -1,0 +1,21 @@
+{
+  "name": "ictlearn",
+  "version": "1.0.0",
+  "description": "HKDSE ICT study platform",
+  "main": "build-search-index.js",
+  "scripts": {
+    "build": "node build-search-index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/notiamalfred/ICTLearn.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cheerio": "^1.2.0"
+  }
+}
