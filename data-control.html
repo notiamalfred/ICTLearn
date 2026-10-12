@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Control — ICTLearn</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">ICT<span>Learn</span></a>
+      <div class="skill-search" role="search">
+        <div class="skill-search__field">
+          <svg class="skill-search__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="21" y2="21"></line></svg>
+          <label class="visually-hidden" for="skillSearch">Search topics</label>
+          <input id="skillSearch" type="search" placeholder="Search topics…  (press / )" autocomplete="off" spellcheck="false" aria-describedby="skillSearchStatus">
+          <button id="skillSearchClear" class="skill-search__clear" type="button" hidden aria-label="Clear search">&times;</button>
+          <div id="searchResults" class="search-results" hidden></div>
+        </div>
+        <p id="skillSearchStatus" class="skill-search__status" role="status" aria-live="polite"></p>
+      </div>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="information-systems.html">Information Systems</a>
+        <a href="data-control.html">Data Control</a>
+        <a href="number-systems.html">Number Systems</a>
+        <a href="barcodes-qr.html">Barcodes &amp; QR</a>
+        <a href="digitalisation.html">Digitalisation</a>
+        <a href="multimedia.html">Multimedia</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="https://notiamalfred.github.io/MathLearn/" class="cross-link">MathLearn ↗</a>
+        <a href="https://notiamalfred.github.io/EconLearn/" class="cross-link">EconLearn ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="skill-page">
+    <div class="container">
+      <h2>Data Control</h2>
+      <p class="section-subtitle">Databases, data errors, validation and verification.</p>
+
+      <nav class="part-nav">
+        <a href="#part-db" class="part-btn">Databases</a>
+        <a href="#part-gigo" class="part-btn">Garbage In, Garbage Out</a>
+        <a href="#part-errors" class="part-btn">Data Errors</a>
+        <a href="#part-validation" class="part-btn">Validation</a>
+        <a href="#part-checkdigit" class="part-btn">Check Digit</a>
+        <a href="#part-ui" class="part-btn">UI Designs</a>
+        <a href="#part-verification" class="part-btn">Verification</a>
+      </nav>
+
+      <h3 class="part-heading" id="part-db">Databases vs Spreadsheets</h3>
+      <div class="skill-grid">
+        <article class="skill-card">
+          <h3>Why use a database?</h3>
+          <p>For managing a large amount of data, a <strong>database</strong> is usually a better choice than a spreadsheet.</p>
+          <p>A <strong>database management system (DBMS)</strong> allows us to organise, store and retrieve data efficiently with a graphical user interface (GUI).</p>
+        </article>
+      </div>
+
+      <h3 class="part-heading" id="part-gigo">Garbage In, Garbage Out</h3>
+      <div class="skill-grid">
+        <article class="skill-card">
+          <h3>The principle</h3>
+          <p>If the input data is wrong or low-quality, the output information will also be wrong or low-quality. Data control (validation and verification) is essential to prevent this.</p>
+        </article>
+      </div>
+
+      <h3 class="part-heading" id="part-errors">Data Errors</h3>
+      <div class="skill-grid">
+        <article class="skill-card">
+          <h3>Common types of data errors</h3>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>Error</th><th>Description</th><th>Example / Solution</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Data source error</strong></td>
+                  <td>Incorrect data is provided by the data source.</td>
+                  <td>Someone provides an email address which does not exist. Send an activation code to the email address and request the user to enter the code.</td>
+                </tr>
+                <tr>
+                  <td><strong>Transcription error</strong></td>
+                  <td>Data is misread, misheard or mistyped.</td>
+                  <td>Confusing 1 vs l, 0 vs O. Validate the data by checking the spelling of words; verify by asking the user to type the data again; proofread the data.</td>
+                </tr>
+                <tr>
+                  <td><strong>Transposition error</strong></td>
+                  <td>Incorrect placement of the data.</td>
+                  <td>12345 → 12354.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="part-heading" id="part-validation">Data Validation</h3>
+      <div class="skill-grid">
+        <article class="skill-card">
+          <h3>Validation vs Verification</h3>
+          <p><strong>Data validation</strong> is done by computers. <strong>Data verification</strong> is done by humans.</p>
+
+          <h4>Types of data validation</h4>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>Type</th><th>Function</th><th>Example</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Presence check</td><td>Ensures that there must be data in the required fields.</td><td>An applicant must provide their name.</td></tr>
+                <tr><td>Fixed value check</td><td>Ensures that the data can only be selected from a list of specific values.</td><td>The sex of an applicant must be either "M" or "F".</td></tr>
+                <tr><td>Type check</td><td>Ensures that the data must be of a certain type.</td><td>The age of an applicant must be a number.</td></tr>
+                <tr><td>Range check</td><td>Ensures that the data must be within a certain range.</td><td>The age of an applicant must be larger than 12.</td></tr>
+                <tr><td>Length check</td><td>Ensures that the length of the data must match certain criteria.</td><td>An applicant must provide an 8-digit phone number.</td></tr>
+                <tr><td>Format check</td><td>Ensures that the data must be in a specific format.</td><td>The email address of an applicant must contain an "@" symbol.</td></tr>
+                <tr><td>Uniqueness check</td><td>The data must be unique for the field.</td><td>Each student can apply once only. There should not be any duplicated student IDs among the applicants.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="part-heading" id="part-checkdigit">Check Digit and Parity Check</h3>
+      <div class="skill-grid">
+        <article class="skill-card">
+          <h3>Check digit</h3>
+          <p>A <strong>check digit</strong> is an extra digit appended to a code to help detect errors during data transmission or entry.</p>
+
+          <h4>Parity check (binary only)</h4>
+          <p>To help detect errors during data transmission, a <strong>parity bit</strong> — similar to the check digit — can be appended to the end of the binary code to ensure that the total number of 1s in the code is even or odd.</p>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>Original binary code</th><th>Total number of 1s</th><th>After even parity</th><th>After odd parity</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>0000 0000</td><td>0</td><td>0000 0000 <strong>0</strong></td><td>0000 0000 <strong>1</strong></td></tr>
+                <tr><td>1010 1010</td><td>4</td><td>1010 1010 <strong>0</strong></td><td>1010 1010 <strong>1</strong></td></tr>
+                <tr><td>0100 1011</td><td>3</td><td>0100 1011 <strong>1</strong></td><td>0100 1011 <strong>0</strong></td></tr>
+                <tr><td>1110 0111</td><td>5</td><td>1110 0111 <strong>1</strong></td><td>1110 0111 <strong>0</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="part-heading" id="part-ui">User Interface Designs for Validation</h3>
+      <div class="skill-grid">
+        <article class="skill-card">
+          <h3>Common UI controls</h3>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>Type</th><th>Data validation</th><th>Example</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Drop-down list</td><td>Fixed value check: only one of the specific values can be input.</td><td>Select country.</td></tr>
+                <tr><td>Radio button</td><td>Fixed value check: only one of the specific values can be input.</td><td>Sex: ○ Plane ○ Car ○ Boat ○ Taxi ○ Motorbike</td></tr>
+                <tr><td>Checkboxes</td><td>Fixed value check: only the specific values can be input. Multiple values can be selected.</td><td>Friday / Saturday / Sunday</td></tr>
+                <tr><td>Date picker</td><td>Type check: only dates can be input. Format check: the date must be in a certain format, such as "DD/MM/YYYY".</td><td>Calendar widget.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="part-heading" id="part-verification">Data Verification</h3>
+      <div class="skill-grid">
+        <article class="skill-card">
+          <h3>When computers cannot catch the error — humans double-check</h3>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>Type</th><th>Description</th><th>Example</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Inputting data twice</strong></td>
+                  <td>It requires an operator to input the same data twice. (1 person, 2 entries)</td>
+                  <td>When a user wants to set a new password for their account, they are required to enter the password two times.</td>
+                </tr>
+                <tr>
+                  <td><strong>Double data entry</strong></td>
+                  <td>It requires two operators to input the same data independently. (2 people, 1 entry each)</td>
+                  <td>Two operators are hired to enter the data of paper questionnaires into an electronic form independently.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Keep learning, keep growing.</p>
+    </div>
+  </footer>
+  <script src="menu.js"></script>
+  <script src="site-search.js"></script>
+</body>
+</html>
