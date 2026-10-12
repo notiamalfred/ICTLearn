@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Multimedia &amp; Compression — ICTLearn</title>
+  <title>Multimedia, Images, Audio &amp; Video — ICTLearn</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -32,38 +32,252 @@
         <a href="glossary.html">Glossary</a>
         <a href="https://notiamalfred.github.io/MathLearn/" class="cross-link">MathLearn ↗</a>
         <a href="https://notiamalfred.github.io/EconLearn/" class="cross-link">EconLearn ↗</a>
-        <a href="https://notiamalfred.github.io/LinguaLearn/" class="cross-link">LinguaLearn ↗</a> 
       </nav>
     </div>
   </header>
 
   <section class="skill-page">
     <div class="container">
-      <h2>Multimedia &amp; Compression</h2>
-      <p class="section-subtitle">File formats, compression types and choosing the right format.</p>
+      <h2>Multimedia, Images, Audio &amp; Video</h2>
+      <p class="section-subtitle">Image types, attributes, compression and file formats for multimedia.</p>
 
       <nav class="part-nav">
-        <a href="#part-formats" class="part-btn">File Formats</a>
+        <a href="#part-image-types" class="part-btn">Image Types</a>
+        <a href="#part-image-attrs" class="part-btn">Image Attributes</a>
+        <a href="#part-image-size" class="part-btn">Image File Size</a>
+        <a href="#part-image-formats" class="part-btn">Image Formats</a>
         <a href="#part-compression" class="part-btn">Compression</a>
-        <a href="#part-image" class="part-btn">Image Formats</a>
+        <a href="#part-audio" class="part-btn">Audio</a>
+        <a href="#part-video" class="part-btn">Video</a>
         <a href="#part-text" class="part-btn">Text Formats</a>
       </nav>
 
-      <h3 class="part-heading" id="part-formats">Multimedia File Formats</h3>
+      <!-- ============ BITMAP VS VECTOR ============ -->
+      <h3 class="part-heading" id="part-image-types">Bitmap vs Vector Images</h3>
       <div class="skill-grid">
         <article class="skill-card">
-          <h3>File headers and metadata</h3>
-          <p>Multimedia (text, image, video, audio) can be stored in various file formats and have different attributes. The file format and the metadata of a file are usually stored in its file header.</p>
+          <h3>Two types of images</h3>
+          <p>There are two types of images:</p>
+          <p><strong>Bitmap images</strong> are stored as a series of little squares called pixels. <strong>Vector images</strong> are stored as mathematical formulae, which connect points to draw lines, curves, circles, polygons, etc.</p>
 
-          <figure>
-            <img src="images/ict-p16-1.png" alt="holiday_photo.jpg with Filename = holiday_photo, Dot = . and Extension = jpg labelled underneath">
-            <figcaption>Filename = holiday_photo, Dot = ., Extension = jpg.</figcaption>
-          </figure>
-
-          <p>Different file formats are supported by different software and operating systems. Some file formats involve compression and suffer from data loss while some do not.</p>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>Type</th><th>Advantage</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Bitmap image</strong></td>
+                  <td>
+                    • Real life digital photos are usually bitmap images<br>
+                    • It can be edited by common image editing software like Microsoft Paint
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Vector image</strong></td>
+                  <td>
+                    • Its file size tends to be smaller<br>
+                    • It does not have rough edges and will not become blurry when scaled up or down<br>
+                    • Usually used for logos or animations
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </article>
       </div>
 
+      <!-- ============ IMAGE ATTRIBUTES ============ -->
+      <h3 class="part-heading" id="part-image-attrs">Image Attributes</h3>
+      <div class="skill-grid">
+        <article class="skill-card">
+          <h3>Four important attributes</h3>
+          <p>An image file has four important attributes: <strong>resolution</strong>, <strong>colour depth</strong>, <strong>aspect ratio</strong> and <strong>transparency</strong>.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Colour Depth</h3>
+          <p><mark class="mark-special">Colour depth is the number of bits used to represent the colour of a pixel.</mark> The higher the colour depth an image has, the more colours it can include.</p>
+
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>Colour depth</th><th>Image</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>8-bit colour (2<sup>8</sup> = 256 colours)</td>
+                  <td>
+                    <figure>
+                      <img src="images/9.png" alt="8-bit colour image — smooth colour gradients">
+                    </figure>
+                  </td>
+                </tr>
+                <tr>
+                  <td>3-bit colour (2<sup>3</sup> = 8 colours)</td>
+                  <td>
+                    <figure>
+                      <img src="images/8.png" alt="3-bit colour image — only 8 colours, visible dithering">
+                    </figure>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4>Additional colour-depth illustrations (grayscale)</h4>
+          <figure>
+            <img src="images/6.png" alt="3-bit colour grayscale — heavy noise and banding">
+            <figcaption>3-bit colour (grayscale) — heavy noise and banding.</figcaption>
+          </figure>
+          <figure>
+            <img src="images/7.png" alt="8-bit colour grayscale — smoother gradients">
+            <figcaption>8-bit colour (grayscale) — smoother gradients.</figcaption>
+          </figure>
+        </article>
+
+        <article class="skill-card">
+          <h3>Resolution</h3>
+          <p><mark class="mark-special">Resolution is the total number of pixels in an image.</mark> It is usually represented as "number of pixels per row × number of pixels per column", i.e. "width × height".</p>
+
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>High-resolution image</th><th>Low-resolution image</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <figure>
+                      <img src="images/5.jpeg" alt="High-resolution image — sharp and smooth">
+                    </figure>
+                  </td>
+                  <td>
+                    <figure>
+                      <img src="images/4.png" alt="Low-resolution image — pixelated and blurry">
+                    </figure>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="skill-card">
+          <h3>Aspect Ratio</h3>
+          <p>The <strong>aspect ratio</strong> is the ratio of an image's width to its height. Common ratios include 4:3 and 16:9. When an image is placed into a container of a different aspect ratio, you can either leave blank spaces (letterboxing) or crop the image.</p>
+
+          <h4>Original image (4:3)</h4>
+          <figure>
+            <img src="images/1.png" alt="Original image with 4:3 aspect ratio">
+            <figcaption>Original image (4:3).</figcaption>
+          </figure>
+
+          <h4>Image with blank spaces (16:9)</h4>
+          <figure>
+            <img src="images/2.jpeg" alt="Same image displayed in a 16:9 container, with black blank spaces on the sides">
+            <figcaption>Image with blank spaces (16:9) — letterboxing.</figcaption>
+          </figure>
+
+          <h4>Cropped image (16:9)</h4>
+          <figure>
+            <img src="images/3.jpeg" alt="Same image cropped to a 16:9 aspect ratio">
+            <figcaption>Cropped image (16:9).</figcaption>
+          </figure>
+        </article>
+
+        <article class="skill-card">
+          <h3>Transparency</h3>
+          <p><mark class="mark-special">Transparency</mark> means that whether an image can have transparent areas or not.</p>
+        </article>
+      </div>
+
+      <!-- ============ IMAGE FILE SIZE ============ -->
+      <h3 class="part-heading" id="part-image-size">Image File Size Calculation</h3>
+      <div class="skill-grid">
+        <article class="skill-card">
+          <h3>Formula</h3>
+          <div class="math-block">
+            <span class="math-line">File size (bits) = Colour depth × Resolution</span>
+            <span class="math-line">= Colour depth × Width in pixels × Height in pixels</span>
+          </div>
+        </article>
+      </div>
+
+      <!-- ============ IMAGE FORMATS ============ -->
+      <h3 class="part-heading" id="part-image-formats">Image File Formats</h3>
+      <div class="skill-grid">
+        <article class="skill-card">
+          <h3>BMP, JPEG, GIF and SVG</h3>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>File format</th>
+                  <th>Type</th>
+                  <th>Supports transparency</th>
+                  <th>Supports animation</th>
+                  <th>Compression</th>
+                  <th>Remarks</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>BMP</strong></td>
+                  <td>Bitmap</td>
+                  <td>×</td>
+                  <td>×</td>
+                  <td>Uncompressed</td>
+                  <td>Relatively large file size. Usually supports 24-bit colour depth.</td>
+                </tr>
+                <tr>
+                  <td><strong>JPEG/JPG</strong></td>
+                  <td>Bitmap</td>
+                  <td>×</td>
+                  <td>×</td>
+                  <td>Lossy</td>
+                  <td>Relatively small file size. Usually supports 24-bit colour depth.</td>
+                </tr>
+                <tr>
+                  <td><strong>GIF</strong></td>
+                  <td>Bitmap</td>
+                  <td>✓</td>
+                  <td>✓</td>
+                  <td>Lossless</td>
+                  <td>Usually supports 8-bit colour depth only.</td>
+                </tr>
+                <tr>
+                  <td><strong>SVG</strong><br><small>(VG stands for vector graphics)</small></td>
+                  <td>Vector</td>
+                  <td>✓</td>
+                  <td>✓</td>
+                  <td>Uncompressed</td>
+                  <td><mark class="mark-special">Lossless compression is supported. Compressed SVG is called SVGZ.</mark></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h4>Image quality / size / compression ratio (from previous notes)</h4>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>File format</th><th>BMP</th><th>PNG</th><th>JPG</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>Compression</td><td>Uncompressed</td><td>Lossless</td><td>Lossy</td></tr>
+                <tr><td>Image file size</td><td>1376 KB</td><td>609 KB</td><td>5 KB</td></tr>
+                <tr><td>Compression ratio</td><td>/</td><td>1376 / 609 = 2.26</td><td>1376 / 5 = 275</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p><strong>Image quality:</strong> BMP = PNG &gt; JPG</p>
+          <p><strong>File size:</strong> BMP &gt; PNG &gt; JPG</p>
+          <p><strong>Compression ratio:</strong> JPG &gt; PNG</p>
+        </article>
+      </div>
+
+      <!-- ============ COMPRESSION ============ -->
       <h3 class="part-heading" id="part-compression">Compression</h3>
       <div class="skill-grid">
         <article class="skill-card">
@@ -104,30 +318,85 @@
         </article>
       </div>
 
-      <h3 class="part-heading" id="part-image">Image File Formats</h3>
+      <!-- ============ AUDIO ============ -->
+      <h3 class="part-heading" id="part-audio">Audio Files</h3>
       <div class="skill-grid">
         <article class="skill-card">
-          <h3>BMP vs PNG vs JPG</h3>
+          <h3>Audio attributes</h3>
+          <p>An <strong>audio file</strong> has three important attributes: <strong>bit depth</strong>, <strong>sampling rate</strong> and the <strong>number of channels</strong>.</p>
+
+          <p><mark class="mark-special">Bit depth is the number of bits used to represent an audio sample.</mark> The higher the bit depth an audio has, the more sound levels it can represent and the better quality it has.</p>
+
+          <p><mark class="mark-special">Sampling rate is the number of audio samples taken per second.</mark> The higher the sampling rate an audio has, the more samples are captured in a period of time. This means the audio is closer to the original sound wave and hence has better quality.</p>
+
+          <p><strong>Number of channels:</strong> sometimes, an audio file has more than one <mark class="mark-special">channel</mark>.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Audio file size calculation</h3>
+          <div class="math-block">
+            <span class="math-line">File size = Bit depth × Number of channels × Sampling rate × Duration</span>
+          </div>
+        </article>
+
+        <article class="skill-card">
+          <h3>Audio file formats</h3>
           <div class="table-wrap">
             <table class="data-table">
               <thead>
-                <tr><th>File format</th><th>BMP</th><th>PNG</th><th>JPG</th></tr>
+                <tr><th>Audio format</th><th>Compression</th></tr>
               </thead>
               <tbody>
-                <tr><td>Compression</td><td>Uncompressed</td><td>Lossless</td><td>Lossy</td></tr>
-                <tr><td>Image File size</td><td>1376 KB</td><td>609 KB</td><td>5 KB</td></tr>
-                <tr><td>Compression ratio</td><td>/</td><td>1376 KB / 609 KB = 2.26</td><td>1376 KB / 5 KB = 275</td></tr>
+                <tr><td>WAV/WAVE</td><td>Uncompressed</td></tr>
+                <tr><td>MP3, AAC, OGG</td><td>Lossy</td></tr>
+                <tr><td>WMA</td><td>Lossy or lossless</td></tr>
+                <tr><td>FLAC, ALAC</td><td>Lossless</td></tr>
+                <tr><td>MIDI</td><td>Uncompressed</td></tr>
               </tbody>
             </table>
           </div>
-          <p>BMP and JPG have the highest quality.</p>
-          <p>BMP has the largest file size.</p>
-          <p><strong>Image quality:</strong> BMP = PNG &gt; JPG</p>
-          <p><strong>File size:</strong> BMP &gt; PNG &gt; JPG</p>
-          <p><strong>Compression ratio:</strong> JPG &gt; PNG</p>
         </article>
       </div>
 
+      <!-- ============ VIDEO ============ -->
+      <h3 class="part-heading" id="part-video">Video Files</h3>
+      <div class="skill-grid">
+        <article class="skill-card">
+          <h3>Video attributes</h3>
+          <p>A <strong>video</strong> is a sequence of images shown within a certain duration and potentially one or more audio tracks. A video file has four important attributes: <mark class="mark-special">colour depth, resolution, frame rate and duration</mark>.</p>
+
+          <p><mark class="mark-special">Frame rate (fps)</mark> is the number of frames shown per second.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Video file size calculation</h3>
+          <div class="math-block">
+            <span class="math-line">File size = <mark class="mark-special">Colour depth × resolution × frame rate × duration</mark></span>
+            <span class="math-line">+ size of the audio track</span>
+          </div>
+        </article>
+
+        <article class="skill-card">
+          <h3>Video file formats</h3>
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>Video format</th><th>Compression</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>AVI</td><td>Lossless</td></tr>
+                <tr><td>MPEG4/MP4</td><td>Lossy</td></tr>
+                <tr><td>WMV, MOV</td><td>Lossy</td></tr>
+                <tr><td>MKV</td><td>Lossy</td></tr>
+                <tr><td>WebM</td><td>Lossy or lossless</td></tr>
+                <tr><td>FLV</td><td>Lossy or lossless</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </div>
+
+      <!-- ============ TEXT FORMATS ============ -->
       <h3 class="part-heading" id="part-text">Text File Formats</h3>
       <div class="skill-grid">
         <article class="skill-card">
@@ -147,39 +416,31 @@
                 <tr><th>File format</th><th>Type</th><th>Remarks</th></tr>
               </thead>
               <tbody>
-                <tr>
-                  <td><strong>txt</strong></td>
-                  <td>Plain text</td>
-                  <td>Relatively small file size. Widely supported by different operating systems.</td>
-                </tr>
-                <tr>
-                  <td><strong>rtf</strong></td>
-                  <td>Formatted text</td>
-                  <td>Widely supported by different operating systems. Can contain images and hyperlinks.</td>
-                </tr>
-                <tr>
-                  <td><strong>doc/docx</strong></td>
-                  <td>Formatted text</td>
-                  <td>Native to Microsoft Word. Contain multimedia, including images, audios, videos, and hyperlinks.</td>
-                </tr>
-                <tr>
-                  <td><strong>odt</strong></td>
-                  <td>Formatted text</td>
-                  <td>Native to OpenOffice Writer and LibreOffice. Contain multimedia, including images, videos, audio and hyperlinks.</td>
-                </tr>
-                <tr>
-                  <td><strong>pages</strong></td>
-                  <td>Formatted text</td>
-                  <td>Native to Apple Pages. Contain multimedia, including images, audios, videos and hyperlinks.</td>
-                </tr>
-                <tr>
-                  <td><strong>pdf</strong></td>
-                  <td>Formatted text</td>
-                  <td>Native to Adobe Acrobat, but is usually exported from other file formats. Contain multimedia, including images, audios, videos and hyperlinks. Provides cross-platform support.</td>
-                </tr>
+                <tr><td><strong>txt</strong></td><td>Plain text</td><td>Relatively small file size. Widely supported by different operating systems.</td></tr>
+                <tr><td><strong>rtf</strong></td><td>Formatted text</td><td>Widely supported by different operating systems. Can contain images and hyperlinks.</td></tr>
+                <tr><td><strong>doc/docx</strong></td><td>Formatted text</td><td>Native to Microsoft Word. Contain multimedia, including images, audios, videos, and hyperlinks.</td></tr>
+                <tr><td><strong>odt</strong></td><td>Formatted text</td><td>Native to OpenOffice Writer and LibreOffice. Contain multimedia, including images, videos, audio and hyperlinks.</td></tr>
+                <tr><td><strong>pages</strong></td><td>Formatted text</td><td>Native to Apple Pages. Contain multimedia, including images, audios, videos and hyperlinks.</td></tr>
+                <tr><td><strong>pdf</strong></td><td>Formatted text</td><td>Native to Adobe Acrobat, but is usually exported from other file formats. Contain multimedia, including images, audios, videos and hyperlinks. Provides cross-platform support.</td></tr>
               </tbody>
             </table>
           </div>
+        </article>
+      </div>
+
+      <!-- ============ FILE HEADERS (kept from previous) ============ -->
+      <h3 class="part-heading" id="part-headers">File Headers and Metadata</h3>
+      <div class="skill-grid">
+        <article class="skill-card">
+          <h3>Where metadata is stored</h3>
+          <p>Multimedia (text, image, video, audio) can be stored in various file formats and have different attributes. The file format and the metadata of a file are usually stored in its <strong>file header</strong>.</p>
+
+          <figure>
+            <img src="images/ict-p16-1.png" alt="holiday_photo.jpg showing Filename, Dot and Extension">
+            <figcaption>Filename = holiday_photo, Dot = ., Extension = jpg.</figcaption>
+          </figure>
+
+          <p>Different file formats are supported by different software and operating systems. Some file formats involve compression and suffer from data loss while some do not.</p>
         </article>
       </div>
     </div>
