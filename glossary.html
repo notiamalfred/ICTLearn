@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glossary — ICTLearn</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">ICT<span>Learn</span></a>
+      <div class="skill-search" role="search">
+        <div class="skill-search__field">
+          <svg class="skill-search__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"></circle><line x1="16.5" y1="16.5" x2="21" y2="21"></line></svg>
+          <label class="visually-hidden" for="skillSearch">Search topics</label>
+          <input id="skillSearch" type="search" placeholder="Search topics…  (press / )" autocomplete="off" spellcheck="false" aria-describedby="skillSearchStatus">
+          <button id="skillSearchClear" class="skill-search__clear" type="button" hidden aria-label="Clear search">&times;</button>
+          <div id="searchResults" class="search-results" hidden></div>
+        </div>
+        <p id="skillSearchStatus" class="skill-search__status" role="status" aria-live="polite"></p>
+      </div>
+      <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="information-systems.html">Information Systems</a>
+        <a href="data-control.html">Data Control</a>
+        <a href="number-systems.html">Number Systems</a>
+        <a href="barcodes-qr.html">Barcodes &amp; QR</a>
+        <a href="digitalisation.html">Digitalisation</a>
+        <a href="multimedia.html">Multimedia</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="https://notiamalfred.github.io/MathLearn/" class="cross-link">MathLearn ↗</a>
+        <a href="https://notiamalfred.github.io/EconLearn/" class="cross-link">EconLearn ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="skill-page">
+    <div class="container">
+      <h2>Glossary of Key Terms</h2>
+      <p class="section-subtitle">Every definition from the notes, in one place.</p>
+
+      <div class="skill-grid">
+        <article class="skill-card">
+          <h3>Information system</h3>
+          <p>A system implemented for automating processes, reducing human errors and improving efficiency.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Data</h3>
+          <p>A collection of unorganised facts which usually has no meaning on its own.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Information</h3>
+          <p>Data that has been processed and put into context so that it has meaning.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Input–Process–Output cycle</h3>
+          <p>Data is input, processed by the computer, and meaningful information is output.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Database management system (DBMS)</h3>
+          <p>Software that allows us to organise, store and retrieve data efficiently with a graphical user interface (GUI).</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Garbage in, garbage out</h3>
+          <p>If input data is wrong or low-quality, the output information will also be wrong or low-quality.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Data source error</h3>
+          <p>Incorrect data is provided by the data source.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Transcription error</h3>
+          <p>Data is misread, misheard or mistyped (e.g. 1 vs l, 0 vs O).</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Transposition error</h3>
+          <p>Incorrect placement of the data (e.g. 12345 → 12354).</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Data validation</h3>
+          <p>Checks done by computers to ensure data entered is reasonable and follows rules. Includes presence, fixed value, type, range, length, format and uniqueness checks.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Data verification</h3>
+          <p>Checks done by humans to ensure data has been entered correctly (inputting data twice, double data entry).</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Check digit</h3>
+          <p>An extra digit appended to a code to help detect errors during data transmission or entry.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Parity bit / Parity check</h3>
+          <p>A bit appended to the end of a binary code so that the total number of 1s is even (even parity) or odd (odd parity), helping detect transmission errors.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Binary</h3>
+          <p>A number system in base 2. Each digit (0 or 1) represents one bit of digital data.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Hexadecimal</h3>
+          <p>A number system in base 16. Each hex digit represents 4 bits of digital data.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Unsigned integer</h3>
+          <p>An integer that includes only positive integers and zero. In N bits, ranges from 0 to 2<sup>N</sup> − 1.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Signed integer</h3>
+          <p>An integer that includes positive integers, negative integers and zero. In N bits, usually ranges from −2<sup>N−1</sup> to 2<sup>N−1</sup> − 1.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Sign &amp; magnitude</h3>
+          <p>A method for representing signed integers where the first bit represents the sign (0 = positive, 1 = negative) and the rest represent the magnitude. Has a drawback: two representations of zero.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Two's complement</h3>
+          <p>A method for representing signed integers in bit pattern. If the first bit is 0, the number is non-negative; if the first bit is 1, the number is negative. To negate, flip all bits and add 1.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>ASCII</h3>
+          <p>American Standard Code for Information Interchange. Uses 7 bits (sometimes extended to 8 bits / 1 byte) to represent a character.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Big-5 code</h3>
+          <p>A character encoding system for Traditional Chinese. Uses 2 bytes per character.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Guobiao (GB) code</h3>
+          <p>A character encoding system for Simplified Chinese. Uses 2 bytes per character.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Unicode</h3>
+          <p>A character encoding system used when multiple languages are expected. Can represent 1,000,000 characters using 1–4 bytes per character.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Barcode</h3>
+          <p>Codes consisting of bars and spaces of different widths to represent a text string, often a product ID. Elements include the barcode symbol, quiet zones, start/end characters and the human-readable text string.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Quiet zone</h3>
+          <p>An empty margin at each end of a barcode symbol (or around the four sides of a QR code). If it is too small, scanning becomes difficult.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>QR code</h3>
+          <p>Quick Response code. Black dots arranged in a white square background, representing a text string (often a URL, phone number or email). Contains position patterns, an alignment pattern and error-correction data for fault tolerance.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Analog data</h3>
+          <p>Data represented in a physical way with continuous values, such as sound waves, written text and drawings.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Digital data</h3>
+          <p>Data represented in discrete symbols (like "0" and "1"), such as text documents, digital photos and audio files.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Digitalisation</h3>
+          <p>The conversion of analog data to digital data. Consists of discretisation (sampling) and quantisation.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Discretisation (sampling)</h3>
+          <p>The process of sampling an analog signal at a regular time interval. The length of this interval determines the sampling rate.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Quantisation</h3>
+          <p>Rounded sampled values to a fixed set of discrete values (such as integers), so the analog signal is stored as a sequence of integers.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Optical character recognition (OCR)</h3>
+          <p>A technique used to convert a digital image of text into editable text.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Lossless compression</h3>
+          <p>Compression in which no data is lost. The original file can be retrieved completely once decompressed.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Lossy compression</h3>
+          <p>Compression in which some data is lost.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Compression ratio</h3>
+          <p>Uncompressed size ÷ Compressed size.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Plain text</h3>
+          <p>A text file that stores characters only. Example: txt.</p>
+        </article>
+
+        <article class="skill-card">
+          <h3>Formatted text</h3>
+          <p>A text file that stores characters and their formatting data (font, size, colour, line spacing, alignment, etc.). Examples: rtf, doc/docx, odt, pages, pdf.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Keep learning, keep growing.</p>
+    </div>
+  </footer>
+  <script src="menu.js"></script>
+  <script src="site-search.js"></script>
+</body>
+</html>
