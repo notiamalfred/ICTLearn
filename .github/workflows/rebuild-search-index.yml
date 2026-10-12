@@ -13,22 +13,55 @@ on:
 permissions:
   contents: write
 
+# Prevent two rebuilds from racing each other on the same branch.
+concurrency:
+  group: rebuild-search-index-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: main
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: npm
+
       - run: npm install
       - run: node build-search-index.js
+
       - name: Commit regenerated index
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
           git add search-index.json
-          git diff --cached --quiet && exit 0
+
+          # Nothing changed → nothing to do
+          if git diff --cached --quiet; then
+            echo "search-index.json is unchanged; nothing to commit."
+            exit 0
+          fi
+
           git commit -m "chore: rebuild search index"
-          git push
+
+          # Rebase onto the latest main and push, retrying on race conditions.
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin main
+
+            if git push origin HEAD:main; then
+              echo "Pushed on attempt $i."
+              exit 0
+            fi
+
+            echo "Push failed on attempt $i; retrying after fetch..."
+            sleep 3
+          done
+
+          echo "Push failed after 5 attempts." >&2
+          exit 1
