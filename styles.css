@@ -67,21 +67,6 @@ body {
   display: flex;
 }
 
-.nav a {
-  color: #e2e8f0;
-  text-decoration: none;
-  margin: 0;
-  padding: 10px 12px;
-  border-radius: 6px;
-  font-size: 1rem;
-  font-weight: 500;
-}
-
-.nav a:hover {
-  background: #bf360c;
-  color: #fff;
-}
-
 .nav .cross-link {
   color: #ffcc80;
   font-weight: 600;
@@ -90,6 +75,49 @@ body {
 .nav .cross-link:hover {
   background: #5d4037;
   color: #fff3e0;
+}
+
+/* MathLearn styles.css, lines 170-184 */
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+.nav-links a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: inline-block;
+  padding: 10px 12px;
+  border-radius: 6px;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+.nav-links a:hover {
+  background: #6b46c1;
+  color: #ffffff;
+}
+.nav-links a.external {
+  color: #fbd38d;
+  font-weight: 600;
+}
+.nav-links a.external:hover {
+  background: #2c5282;
+  color: #fff;
+}
+.nav-links a.external::after {
+  content: " \2197";
+  font-size: 0.85em;
+}
+.nav-links a.active {
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
 }
 
 /* ---------- Hero ---------- */
