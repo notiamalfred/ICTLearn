@@ -77,7 +77,7 @@ body {
   color: #fff3e0;
 }
 
-/* MathLearn styles.css, lines 170-184 */
+/* ---------- Generated Menu (matches MathLearn/LinguaLearn) ---------- */
 .nav-links {
   list-style: none;
   padding: 0;
@@ -87,6 +87,7 @@ body {
   gap: 0.5rem;
   margin-top: 2rem;
 }
+
 .nav-links a {
   color: #e2e8f0;
   text-decoration: none;
@@ -96,22 +97,30 @@ body {
   border-radius: 6px;
   transition: color 0.2s ease, background 0.2s ease;
 }
+
 .nav-links a:hover {
-  background: #6b46c1;
+  background: #bf360c;   /* ICTLearn brown‑orange hover */
   color: #ffffff;
 }
+
+/* External links (MathLearn, EconLearn, LinguaLearn) */
 .nav-links a.external {
-  color: #fbd38d;
+  color: #fbd38d;        /* Yellow */
   font-weight: 600;
 }
+
 .nav-links a.external:hover {
-  background: #2c5282;
-  color: #fff;
+  background: #5d4037;
+  color: #fff3e0;
 }
+
+/* Little arrow (↗) for external links */
 .nav-links a.external::after {
   content: " \2197";
   font-size: 0.85em;
 }
+
+/* Active page highlight */
 .nav-links a.active {
   font-weight: 700;
   color: #ffffff;
