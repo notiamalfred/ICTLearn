@@ -67,29 +67,54 @@ body {
   display: flex;
 }
 
-.nav a {
-  color: #e2e8f0;
-  text-decoration: none;
+/* ---------- Generated Menu (nav-links) ---------- */
+.nav-links {
+  list-style: none; /* Removes the bullet points */
+  padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px; /* Adds a tiny gap between menu items */
+}
+
+.nav-links a {
+  color: #e2e8f0;
+  text-decoration: none; /* Removes the underline */
+  display: block; /* Makes the whole padding area clickable */
   padding: 10px 12px;
   border-radius: 6px;
   font-size: 1rem;
   font-weight: 500;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
-.nav a:hover {
+.nav-links a:hover {
   background: #bf360c;
   color: #fff;
 }
 
-.nav .cross-link {
-  color: #ffcc80;
+/* External links (MathLearn, EconLearn, LinguaLearn) */
+.nav-links a.external {
+  color: #ffcc80; /* Matches your old cross-link color */
   font-weight: 600;
 }
 
-.nav .cross-link:hover {
+.nav-links a.external:hover {
   background: #5d4037;
   color: #fff3e0;
+}
+
+/* The arrow icon added automatically via CSS */
+.nav-links a.external::after {
+  content: " \2197"; /* ↗ */
+  font-size: 0.85em;
+}
+
+/* Active page highlight */
+.nav-links a.active {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1); /* Subtle highlight for the current page */
+  font-weight: 700;
 }
 
 /* ---------- Hero ---------- */
